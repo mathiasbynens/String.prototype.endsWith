@@ -4,7 +4,7 @@ A robust & optimized ES3-compatible polyfill for [the `String.prototype.endsWith
 
 Other polyfills for `String.prototype.endsWith` are available:
 
-* <https://github.com/paulmillr/es6-shim/blob/4322eae20b6f8a7769fa1d89ac207ef8ee9e1ee4/es6-shim.js#L156-L165> by [Paul Miller](http://paulmillr.com/) ([fails 5 tests](https://github.com/paulmillr/es6-shim/issues/168))
+* <https://github.com/paulmillr/es6-shim/blob/4322eae20b6f8a7769fa1d89ac207ef8ee9e1ee4/es6-shim.js#L156-L165> by [Paul Miller](http://paulmillr.com/) (fails some tests: [1](https://github.com/paulmillr/es6-shim/issues/168), [2](https://github.com/paulmillr/es6-shim/issues/175))
 * <https://github.com/google/traceur-compiler/blob/b9b6c1ad7837c6f156213f690c05374604767fac/src/runtime/runtime.js#L55-L59> by Google (~~[fails a lot of tests](https://github.com/google/traceur-compiler/pull/555)~~ now uses this polyfill and passes all tests)
 
 ## Installation
