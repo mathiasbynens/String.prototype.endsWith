@@ -218,4 +218,4 @@ assertEquals(String.prototype.endsWith.apply(42, ['2', 4]), true);
 assertEquals(String.prototype.endsWith.apply({ 'toString': function() { return 'abc'; } }, ['b', 0]), false);
 assertEquals(String.prototype.endsWith.apply({ 'toString': function() { return 'abc'; } }, ['b', 1]), false);
 assertEquals(String.prototype.endsWith.apply({ 'toString': function() { return 'abc'; } }, ['b', 2]), true);
-assertThrows(function() { String.prototype.endsWith.apply({ 'toString': function() { throw RangeError(); } }, /./); }, RangeError);
+assertThrows(function() { String.prototype.endsWith.apply({ 'toString': function() { throw RangeError(); } }, [/./]); }, RangeError);
