@@ -32,7 +32,7 @@ if (!String.prototype.endsWith) {
 			}
 			var index = -1;
 			while (++index < searchLength) {
-				if (string.charAt(start + index) != searchString.charAt(index)) {
+				if (string.charCodeAt(start + index) != searchString.charCodeAt(index)) {
 					return false;
 				}
 			}
