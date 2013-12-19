@@ -20,7 +20,7 @@ if (!String.prototype.endsWith) {
 				if (position !== undefined) {
 					// `ToInteger`
 					pos = position ? Number(position) : 0;
-					if (isNaN(pos)) {
+					if (pos != pos) { // better `isNaN`
 						pos = 0;
 					}
 				}
