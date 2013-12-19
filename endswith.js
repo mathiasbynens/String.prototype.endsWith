@@ -2,7 +2,6 @@
 if (!String.prototype.endsWith) {
 	(function() {
 		'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
-		var lastIndexOf = ''.lastIndexOf;
 		var toString = {}.toString;
 		String.prototype.endsWith = function(search) {
 			var string = String(this);
@@ -31,7 +30,13 @@ if (!String.prototype.endsWith) {
 			if (start < 0) {
 				return false;
 			}
-			return lastIndexOf.call(string, searchString, start) == start;
+			var index = -1;
+			while (++index < searchLength) {
+				if (string.charAt(start + index) != searchString.charAt(index)) {
+					return false;
+				}
+			}
+			return true;
 		};
 	}());
 }
