@@ -3,7 +3,7 @@ if (!String.prototype.endsWith) {
 	(function() {
 		'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
 		var toString = {}.toString;
-		String.prototype.endsWith = function(search) {
+		var endsWith = function(search) {
 			var string = String(this);
 			if (
 				this == null ||
@@ -38,5 +38,14 @@ if (!String.prototype.endsWith) {
 			}
 			return true;
 		};
+		if (Object.defineProperty) {
+			Object.defineProperty(String.prototype, 'endsWith', {
+				'value': endsWith,
+				'configurable': true,
+				'writable': true
+			});
+		} else {
+			String.prototype.endsWith = endsWith;
+		}
 	}());
 }

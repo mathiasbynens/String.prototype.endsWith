@@ -5,6 +5,7 @@ var assertThrows = assert['throws'];
 require('../endswith.js');
 
 assertEquals(String.prototype.endsWith.length, 1);
+assertEquals(String.prototype.propertyIsEnumerable('endsWith'), false);
 
 assertEquals('undefined'.endsWith(), true);
 assertEquals('undefined'.endsWith(undefined), true);
