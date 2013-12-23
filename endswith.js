@@ -4,11 +4,11 @@ if (!String.prototype.endsWith) {
 		'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
 		var toString = {}.toString;
 		var endsWith = function(search) {
+			if (this == null) {
+				throw TypeError();
+			}
 			var string = String(this);
-			if (
-				this == null ||
-				(search && toString.call(search) == '[object RegExp]')
-			) {
+			if (search && toString.call(search) == '[object RegExp]') {
 				throw TypeError();
 			}
 			var stringLength = string.length;
