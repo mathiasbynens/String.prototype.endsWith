@@ -2,6 +2,15 @@
 if (!String.prototype.endsWith) {
 	(function() {
 		'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
+		var defineProperty = (function() {
+			// IE 8 only supports `Object.defineProperty` on DOM elements
+			try {
+				var object = {};
+				var $defineProperty = Object.defineProperty;
+				var result = $defineProperty(object, object, object) && $defineProperty;
+			} catch(error) {}
+			return result;
+		}());
 		var toString = {}.toString;
 		var endsWith = function(search) {
 			if (this == null) {
@@ -38,8 +47,8 @@ if (!String.prototype.endsWith) {
 			}
 			return true;
 		};
-		if (Object.defineProperty) {
-			Object.defineProperty(String.prototype, 'endsWith', {
+		if (defineProperty) {
+			defineProperty(String.prototype, 'endsWith', {
 				'value': endsWith,
 				'configurable': true,
 				'writable': true
