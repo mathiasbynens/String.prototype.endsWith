@@ -33,14 +33,14 @@ require('String.prototype.endsWith');
 
 ## Notes
 
-Polyfills + test suites for [`String.prototype.startsWith`](http://mths.be/startswith) and [`String.prototype.contains`](http://mths.be/contains) are available, too.
+Polyfills + test suites for [`String.prototype.startsWith`](https://mths.be/startswith) and [`String.prototype.contains`](https://mths.be/contains) are available, too.
 
 ## Author
 
 | [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
 |---|
-| [Mathias Bynens](http://mathiasbynens.be/) |
+| [Mathias Bynens](https://mathiasbynens.be/) |
 
 ## License
 
-This polyfill is available under the [MIT](http://mths.be/mit) license.
+This polyfill is available under the [MIT](https://mths.be/mit) license.
