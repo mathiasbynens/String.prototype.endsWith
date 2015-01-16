@@ -13,11 +13,8 @@ if (!String.prototype.endsWith) {
 		}());
 		var toString = {}.toString;
 		var endsWith = function(search) {
-			if (this == null) {
-				throw TypeError();
-			}
 			var string = String(this);
-			if (search && toString.call(search) == '[object RegExp]') {
+			if (this == null || toString.call(search) == '[object RegExp]') {
 				throw TypeError();
 			}
 			var stringLength = string.length;
