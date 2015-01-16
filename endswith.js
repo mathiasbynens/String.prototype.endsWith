@@ -36,16 +36,8 @@ if (!String.prototype.endsWith) {
 			}
 			var end = Math.min(Math.max(pos, 0), stringLength);
 			var start = end - searchLength;
-			if (start < 0) {
-				return false;
-			}
-			var index = -1;
-			while (++index < searchLength) {
-				if (string.charCodeAt(start + index) != searchString.charCodeAt(index)) {
-					return false;
-				}
-			}
-			return true;
+
+			return start > -1 && string.lastIndexOf(searchString, start) == start;
 		};
 		if (defineProperty) {
 			defineProperty(String.prototype, 'endsWith', {
