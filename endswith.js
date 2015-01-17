@@ -13,11 +13,8 @@ if (!String.prototype.endsWith) {
 		}());
 		var toString = {}.toString;
 		var endsWith = function(search) {
-			if (this == null) {
-				throw TypeError();
-			}
 			var string = String(this);
-			if (search && toString.call(search) == '[object RegExp]') {
+			if (this == null || toString.call(search) == '[object RegExp]') {
 				throw TypeError();
 			}
 			var stringLength = string.length;
@@ -36,16 +33,8 @@ if (!String.prototype.endsWith) {
 			}
 			var end = Math.min(Math.max(pos, 0), stringLength);
 			var start = end - searchLength;
-			if (start < 0) {
-				return false;
-			}
-			var index = -1;
-			while (++index < searchLength) {
-				if (string.charCodeAt(start + index) != searchString.charCodeAt(index)) {
-					return false;
-				}
-			}
-			return true;
+
+			return start > -1 && string.lastIndexOf(searchString, start) == start;
 		};
 		if (defineProperty) {
 			defineProperty(String.prototype, 'endsWith', {
