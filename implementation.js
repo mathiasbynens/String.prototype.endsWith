@@ -15,7 +15,9 @@ var min = Math.min;
 module.exports = function endsWith(searchString) {
 	var O = RequireObjectCoercible(this);
 	var S = ToString(O);
-	if (IsRegExp(searchString)) throw TypeError();
+	if (IsRegExp(searchString)) {
+		throw TypeError('Argument to String.prototype.endsWith cannot be a RegExp');
+	}
 	var searchStr = ToString(searchString);
 
 	var len = S.length;
