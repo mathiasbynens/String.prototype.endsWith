@@ -2,7 +2,7 @@ var assert = require('assert');
 var assertEquals = assert.equal;
 var assertThrows = assert['throws'];
 
-require('../endswith.js');
+require('../auto.js');
 
 assertEquals(String.prototype.endsWith.length, 1);
 assertEquals(String.prototype.propertyIsEnumerable('endsWith'), false);
