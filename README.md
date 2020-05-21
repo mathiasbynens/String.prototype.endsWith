@@ -1,6 +1,8 @@
 # ES6 `String.prototype.endsWith` polyfill [![Build status](https://travis-ci.org/mathiasbynens/String.prototype.endsWith.svg?branch=master)](https://travis-ci.org/mathiasbynens/String.prototype.endsWith)
 
-A robust & optimized ES3-compatible polyfill for [the `String.prototype.endsWith` method in ECMAScript 6](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).
+A robust & optimized polyfill for [the `String.prototype.endsWith` method in ECMAScript 6](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).
+
+This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-string.prototype.endswith).
 
 Other polyfills for `String.prototype.endsWith` are available:
 
@@ -8,12 +10,6 @@ Other polyfills for `String.prototype.endsWith` are available:
 * <https://github.com/google/traceur-compiler/blob/315bdad05d41de46d25337422d66686d63100d7a/src/runtime/polyfills/String.js#L39-L66> by Google (~~[fails a lot of tests](https://github.com/google/traceur-compiler/pull/555)~~ now uses this polyfill and passes all tests)
 
 ## Installation
-
-In a browser:
-
-```html
-<script src="endswith.js"></script>
-```
 
 Via [npm](http://npmjs.org/):
 
@@ -24,12 +20,16 @@ npm install string.prototype.endswith
 Then, in [Node.js](http://nodejs.org/):
 
 ```js
-require('string.prototype.endswith');
-
-// On Windows and on Mac systems with default settings, case doesn’t matter,
-// which allows you to do this instead:
-require('String.prototype.endsWith');
+var endsWith = require('string.prototype.endswith');
 ```
+
+```html
+<script src="https://bundle.run/string.prototype.endswith"></script>
+```
+
+> **NOTE**: It's recommended that you install this module using a package manager
+> such as `npm`, because loading multiple polyfills from a CDN (such as `bundle.run`)
+> will lead to duplicated code.
 
 ## Notes
 
