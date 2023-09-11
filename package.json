@@ -32,8 +32,8 @@
 	"scripts": {
 		"pretest": "es-shim-api --bound",
 		"test": "npm run tests-only",
-		"tests-only": "tape 'tests/*.js'",
-		"cover": "istanbul cover --report html --verbose --dir coverage tape 'tests/*.js'"
+		"tests-only": "tape 'test/*.js'",
+		"cover": "istanbul cover --report html --verbose --dir coverage tape 'test/*.js'"
 	},
 	"dependencies": {
 		"define-properties": "^1.1.3",
