@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1](https://github.com/mathiasbynens/String.prototype.endsWith/compare/v1.0.0...v1.0.1) - 2023-09-11
+
+### Commits
+
+- [eslint] add eslint [`fb8cc46`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/fb8cc4665fd53eb2c91bb9da9cb4571c5a61f949)
+- [Tests] Switch from travis to GH actions [`b35ea44`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/b35ea44919003637de2bc13ee9a44b0e1247ba81)
+- [meta] add `auto-changelog` [`b6da653`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/b6da653669763483e3653fe3c62f7f699c3df535)
+- Set up automated `npm publish` [`b9be2b4`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/b9be2b462ad6c125dbe0de55d8f1d53891bcd4d4)
+- [readme] move maintainer instructions to CONTRIBUTING.md [`46da5f5`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/46da5f56fc6cb50915cd90f5f50cabb22b2c4ade)
+- [readme] update badges [`64e2a03`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/64e2a035f9fc8b086e3f1320771fe2f8996a287d)
+- [Deps] update `define-properties`, `es-abstract`; add `call-bind` [`185ac54`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/185ac546e6cc4840b185f30fda48c9fd12fac313)
+- [Tests] switch from istanbul to nyc [`8d33676`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/8d336769e74e1083c9caa353b55a6610a01ef33c)
+- [actions] use reusable rebase action [`a53f174`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/a53f17412eacf0d6161efe3a2f87938c474c62df)
+- [actions] fix publish workflow [`84d19c3`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/84d19c3c019ed8b727ec8a337144a6e24cc9cec6)
+- [Dev Deps] update `@es-shims/api`, `functions-have-names`, `tape` [`9543e15`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/9543e15819960a7823ee8117ef13cd76bd652f29)
+- [meta] remove broken `getPolyfill` entry point; add correct `polyfill` entry point [`0d5242c`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/0d5242c56c72c0f28961eb859be107eca0ea2d80)
+- [Tests] rename `tests` to `test` [`5e344d8`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/5e344d8a15c9ca4c6bf5097bb0c3f0598390ea43)
+- [Tests] add `aud` via `npm run posttest` [`699cf8c`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/699cf8ce416bb8b3904a476e485129d1d7d242a5)
+
 ## [v1.0.0](https://github.com/mathiasbynens/String.prototype.endsWith/compare/v0.2.0...v1.0.0) - 2020-05-21
 
 ### Commits
