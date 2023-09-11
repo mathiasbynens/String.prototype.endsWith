@@ -34,9 +34,8 @@
 		"postlint": "es-shim-api --bound",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
-		"tests-only": "tape 'test/*.js'",
+		"tests-only": "nyc tape 'test/*.js'",
 		"posttest": "aud --production",
-		"cover": "istanbul cover --report html --verbose --dir coverage tape 'test/*.js'",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
@@ -53,7 +52,7 @@
 		"eslint": "=8.8.0",
 		"function-bind": "^1.1.1",
 		"functions-have-names": "^1.2.3",
-		"istanbul": "^0.4.5",
+		"nyc": "^10.3.2",
 		"tape": "^5.6.6"
 	},
 	"auto-changelog": {
