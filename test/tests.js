@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = function(endsWith, t) {
-	t.test('nullish search string', function(st) {
+module.exports = function (endsWith, t) {
+	t.test('nullish search string', function (st) {
 		st.equal(endsWith('undefined'), true);
 		st.equal(endsWith('undefined', undefined), true);
 		st.equal(endsWith('undefined', null), false);
@@ -11,7 +11,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('basic support', function(st) {
+	t.test('basic support', function (st) {
 		st.equal(endsWith('abc'), false);
 		st.equal(endsWith('abc', ''), true);
 		st.equal(endsWith('abc', '\0'), false);
@@ -26,7 +26,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - NaN', function(st) {
+	t.test('position argument - NaN', function (st) {
 		st.equal(endsWith('abc', '', NaN), true);
 		st.equal(endsWith('abc', '\0', NaN), false);
 		st.equal(endsWith('abc', 'c', NaN), false);
@@ -41,7 +41,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - false', function(st) {
+	t.test('position argument - false', function (st) {
 		st.equal(endsWith('abc', '', false), true);
 		st.equal(endsWith('abc', '\0', false), false);
 		st.equal(endsWith('abc', 'c', false), false);
@@ -56,7 +56,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - undefined', function(st) {
+	t.test('position argument - undefined', function (st) {
 		st.equal(endsWith('abc', '', undefined), true);
 		st.equal(endsWith('abc', '\0', undefined), false);
 		st.equal(endsWith('abc', 'c', undefined), true);
@@ -71,7 +71,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - null', function(st) {
+	t.test('position argument - null', function (st) {
 		st.equal(endsWith('abc', '', null), true);
 		st.equal(endsWith('abc', '\0', null), false);
 		st.equal(endsWith('abc', 'c', null), false);
@@ -86,7 +86,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - -Infinity', function(st) {
+	t.test('position argument - -Infinity', function (st) {
 		st.equal(endsWith('abc', '', -Infinity), true);
 		st.equal(endsWith('abc', '\0', -Infinity), false);
 		st.equal(endsWith('abc', 'c', -Infinity), false);
@@ -101,7 +101,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - -1', function(st) {
+	t.test('position argument - -1', function (st) {
 		st.equal(endsWith('abc', '', -1), true);
 		st.equal(endsWith('abc', '\0', -1), false);
 		st.equal(endsWith('abc', 'c', -1), false);
@@ -116,7 +116,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - -0', function(st) {
+	t.test('position argument - -0', function (st) {
 		st.equal(endsWith('abc', '', -0), true);
 		st.equal(endsWith('abc', '\0', -0), false);
 		st.equal(endsWith('abc', 'c', -0), false);
@@ -131,7 +131,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - +0', function(st) {
+	t.test('position argument - +0', function (st) {
 		st.equal(endsWith('abc', '', +0), true);
 		st.equal(endsWith('abc', '\0', +0), false);
 		st.equal(endsWith('abc', 'c', +0), false);
@@ -146,7 +146,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - 1', function(st) {
+	t.test('position argument - 1', function (st) {
 		st.equal(endsWith('abc', '', 1), true);
 		st.equal(endsWith('abc', '\0', 1), false);
 		st.equal(endsWith('abc', 'c', 1), false);
@@ -161,7 +161,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - common integer', function(st) {
+	t.test('position argument - common integer', function (st) {
 		st.equal(endsWith('abc', '', 2), true);
 		st.equal(endsWith('abc', '\0', 2), false);
 		st.equal(endsWith('abc', 'c', 2), false);
@@ -176,22 +176,22 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - +Infinity', function(st) {
-		st.equal(endsWith('abc', '', +Infinity), true);
-		st.equal(endsWith('abc', '\0', +Infinity), false);
-		st.equal(endsWith('abc', 'c', +Infinity), true);
-		st.equal(endsWith('abc', 'b', +Infinity), false);
-		st.equal(endsWith('abc', 'a', +Infinity), false);
-		st.equal(endsWith('abc', 'ab', +Infinity), false);
-		st.equal(endsWith('abc', 'bc', +Infinity), true);
-		st.equal(endsWith('abc', 'abc', +Infinity), true);
-		st.equal(endsWith('abc', 'bcd', +Infinity), false);
-		st.equal(endsWith('abc', 'abcd', +Infinity), false);
-		st.equal(endsWith('abc', 'bcde', +Infinity), false);
+	t.test('position argument - +Infinity', function (st) {
+		st.equal(endsWith('abc', '', Number(Infinity)), true);
+		st.equal(endsWith('abc', '\0', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'c', Number(Infinity)), true);
+		st.equal(endsWith('abc', 'b', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'a', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'ab', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'bc', Number(Infinity)), true);
+		st.equal(endsWith('abc', 'abc', Number(Infinity)), true);
+		st.equal(endsWith('abc', 'bcd', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'abcd', Number(Infinity)), false);
+		st.equal(endsWith('abc', 'bcde', Number(Infinity)), false);
 		st.end();
 	});
 
-	t.test('position argument - true', function(st) {
+	t.test('position argument - true', function (st) {
 		st.equal(endsWith('abc', '', true), true);
 		st.equal(endsWith('abc', '\0', true), false);
 		st.equal(endsWith('abc', 'c', true), false);
@@ -206,7 +206,7 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('position argument - string', function(st) {
+	t.test('position argument - string', function (st) {
 		st.equal(endsWith('abc', '', 'x'), true);
 		st.equal(endsWith('abc', '\0', 'x'), false);
 		st.equal(endsWith('abc', 'c', 'x'), false);
@@ -221,16 +221,16 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('search regexp', function(st) {
+	t.test('search regexp', function (st) {
 		st.equal(endsWith('[a-z]+(bar)?', '(bar)?'), true);
-		st['throws'](function() { endsWith('[a-z]+(bar)?', /(bar)?/); }, TypeError);
+		st['throws'](function () { endsWith('[a-z]+(bar)?', /(bar)?/); }, TypeError);
 		st.equal(endsWith('[a-z]+(bar)?', '[a-z]+', 6), true);
-		st['throws'](function() { endsWith('[a-z]+(bar)?', /(bar)?/); }, TypeError);
-		st['throws'](function() { endsWith('[a-z]+/(bar)?/', /(bar)?/); }, TypeError);
+		st['throws'](function () { endsWith('[a-z]+(bar)?', /(bar)?/); }, TypeError);
+		st['throws'](function () { endsWith('[a-z]+/(bar)?/', /(bar)?/); }, TypeError);
 		st.end();
 	});
 
-	t.test('astral code points', function(st) {
+	t.test('astral code points', function (st) {
 		// https://mathiasbynens.be/notes/javascript-unicode#poo-test
 		var string = 'I\xF1t\xEBrn\xE2ti\xF4n\xE0liz\xE6ti\xF8n\u2603\uD83D\uDCA9';
 		st.equal(string.endsWith(''), true);
@@ -247,27 +247,27 @@ module.exports = function(endsWith, t) {
 		st.end();
 	});
 
-	t.test('nullish this object', function(st) {
-		st['throws'](function() { endsWith(undefined); }, TypeError);
-		st['throws'](function() { endsWith(undefined, 'b'); }, TypeError);
-		st['throws'](function() { endsWith(undefined, 'b', 4); }, TypeError);
-		st['throws'](function() { endsWith(null); }, TypeError);
-		st['throws'](function() { endsWith(null, 'b'); }, TypeError);
-		st['throws'](function() { endsWith(null, 'b', 4); }, TypeError);
+	t.test('nullish this object', function (st) {
+		st['throws'](function () { endsWith(undefined); }, TypeError);
+		st['throws'](function () { endsWith(undefined, 'b'); }, TypeError);
+		st['throws'](function () { endsWith(undefined, 'b', 4); }, TypeError);
+		st['throws'](function () { endsWith(null); }, TypeError);
+		st['throws'](function () { endsWith(null, 'b'); }, TypeError);
+		st['throws'](function () { endsWith(null, 'b', 4); }, TypeError);
 		st.end();
 	});
 
-	t.test('cast this object', function(st) {
+	t.test('cast this object', function (st) {
 		st.equal(endsWith(42, '2'), true);
 		st.equal(endsWith(42, '4'), false);
 		st.equal(endsWith(42, 'b', 4), false);
 		st.equal(endsWith(42, '2', 1), false);
 		st.equal(endsWith(42, '2', 4), true);
-		st.equal(endsWith({ 'toString': function() { return 'abc'; } }, 'b', 0), false);
-		st.equal(endsWith({ 'toString': function() { return 'abc'; } }, 'b', 1), false);
-		st.equal(endsWith({ 'toString': function() { return 'abc'; } }, 'b', 2), true);
-		st['throws'](function() { endsWith({ 'toString': function() { throw RangeError(); } }, /./); }, RangeError);
-		st['throws'](function() { endsWith({ 'toString': function() { return 'abc' } }, /./); }, TypeError);
+		st.equal(endsWith({ toString: function () { return 'abc'; } }, 'b', 0), false);
+		st.equal(endsWith({ toString: function () { return 'abc'; } }, 'b', 1), false);
+		st.equal(endsWith({ toString: function () { return 'abc'; } }, 'b', 2), true);
+		st['throws'](function () { endsWith({ toString: function () { throw new RangeError(); } }, /./); }, RangeError);
+		st['throws'](function () { endsWith({ toString: function () { return 'abc'; } }, /./); }, TypeError);
 		st.end();
 	});
 };

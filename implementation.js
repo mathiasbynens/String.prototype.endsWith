@@ -16,7 +16,7 @@ module.exports = function endsWith(searchString) {
 	var O = RequireObjectCoercible(this);
 	var S = ToString(O);
 	if (IsRegExp(searchString)) {
-		throw TypeError('Argument to String.prototype.endsWith cannot be a RegExp');
+		throw new TypeError('Argument to String.prototype.endsWith cannot be a RegExp');
 	}
 	var searchStr = ToString(searchString);
 
@@ -31,8 +31,8 @@ module.exports = function endsWith(searchString) {
 		return false;
 	}
 	var index = -1;
-	while (++index < searchLength) {
-		if (StringCharCodeAt(S, start + index) != StringCharCodeAt(searchStr, index)) {
+	while (++index < searchLength) { // eslint-disable-line no-plusplus
+		if (StringCharCodeAt(S, start + index) !== StringCharCodeAt(searchStr, index)) {
 			return false;
 		}
 	}
