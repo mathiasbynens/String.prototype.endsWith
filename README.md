@@ -44,28 +44,6 @@ var endsWith = require('string.prototype.endswith');
 
 Polyfills + test suites for [`String.prototype.startsWith`](https://mths.be/startswith) and [`String.prototype.contains`](https://mths.be/contains) are available, too.
 
-## For maintainers
-
-### How to publish a new release
-
-1. On the `main` branch, bump the version number in `package.json`:
-
-    ```sh
-    npm version patch
-    ```
-
-    Instead of `patch`, use `minor` or `major` [as needed](https://semver.org/).
-
-    Note that this produces a Git commit + tag.
-
-1. Push the release commit and tag:
-
-    ```sh
-    git push && git push --tags
-    ```
-
-    Our CI then automatically publishes the new release to npm.
-
 ## Author
 
 | [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias "Follow @mathias on Twitter") |
