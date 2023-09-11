@@ -1,8 +1,17 @@
-# ES6 `String.prototype.endsWith` polyfill [![string.prototype.endswith on npm](https://img.shields.io/npm/v/string.prototype.endswith)](https://www.npmjs.com/package/string.prototype.endswith)
+# string.prototype.endswith <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
-A robust & optimized polyfill for [the `String.prototype.endsWith` method in ECMAScript 6](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-string.prototype.endswith).
+[![dependency status][deps-svg]][deps-url]
+[![dev dependency status][dev-deps-svg]][dev-deps-url]
+[![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
+
+[![npm badge][npm-badge-png]][package-url]
+
+An ESnext spec-compliant `String.prototype.endsWith` shim/polyfill/replacement that works as far down as ES3.
 
 This package implements the [es-shim API](https://github.com/es-shims/api) interface. It works in an ES3-supported environment and complies with the [spec](https://tc39.es/ecma262/#sec-string.prototype.endswith).
+
+Because `String.prototype.endsWith` depends on a receiver (the `this` value), the main export takes the string to operate on as the first argument.
 
 Other polyfills for `String.prototype.endsWith` are available:
 
@@ -66,3 +75,18 @@ Polyfills + test suites for [`String.prototype.startsWith`](https://mths.be/star
 ## License
 
 This polyfill is available under the [MIT](https://mths.be/mit) license.
+
+## Tests
+Simply clone the repo, `npm install`, and run `npm test`
+
+[package-url]: https://npmjs.org/package/string.prototype.endswith
+[npm-version-svg]: https://versionbadg.es/es-shims/String.prototype.endsWith.svg
+[deps-svg]: https://david-dm.org/es-shims/String.prototype.endsWith.svg
+[deps-url]: https://david-dm.org/es-shims/String.prototype.endsWith
+[dev-deps-svg]: https://david-dm.org/es-shims/String.prototype.endsWith/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/String.prototype.endsWith#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/string.prototype.endswith.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/string.prototype.endswith.svg
+[license-url]: LICENSE
+[downloads-image]: https://img.shields.io/npm/dm/string.prototype.endswith.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=string.prototype.endswith
