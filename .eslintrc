@@ -10,7 +10,7 @@
 				"IsRegExp",
 				"RequireObjectCoercible",
 				"StringCharCodeAt",
-				"ToInteger",
+				"ToIntegerOrInfinity",
 				"ToString",
 			],
 		}],
