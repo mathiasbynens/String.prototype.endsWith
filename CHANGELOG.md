@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.2](https://github.com/mathiasbynens/String.prototype.endsWith/compare/v1.0.1...v1.0.2) - 2024-03-18
+
+### Commits
+
+- [Deps] update `call-bind`, `define-properties`, `es-abstract` [`38e22e6`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/38e22e69450af8a3f4ffa4f50a836b78a6204ffc)
+- [eslint] fix linting errors [`44cfb77`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/44cfb77f14f5ad2e8be69d6eb41d90c510d07c09)
+- [Dev Deps] update `aud`, `function-bind`, `tape` [`6f50b14`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/6f50b145b90c2a7faee01a924c26e8b9b487fc7d)
+- [Refactor] use `es-object-atoms` instead of `es-abstract` when possible [`42aa444`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/42aa4443737685d4fd2229cef1ecd03f83e8018d)
+- [meta] add missing `engines.node` [`bccb5bb`](https://github.com/mathiasbynens/String.prototype.endsWith/commit/bccb5bb26e7e5c1a874f5c2558af8d8f7b7ede7f)
+
 ## [v1.0.1](https://github.com/mathiasbynens/String.prototype.endsWith/compare/v1.0.0...v1.0.1) - 2023-09-11
 
 ### Commits
